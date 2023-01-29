@@ -25,8 +25,6 @@ export default async function handler(req: NextRequest): Promise<Response> {
 
     const prompt = generatePrompt(schemaResult.data)
 
-    return new Response(prompt)
-
     const payload: OpenAIPayload = {
       model: "text-davinci-003",
       prompt,
