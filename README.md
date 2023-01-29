@@ -1,10 +1,6 @@
 # Config Wizard - The AI Configuration Generator 🪄✨
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/checkerschaf/config-wizard/main/src/images/Config-Wizard-screenshot-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/checkerschaf/config-wizard/main/src/images/Config-Wizard-screenshot.png">
-  <img alt="Config Wizard screenshot" src="https://raw.githubusercontent.com/checkerschaf/config-wizard/main/src/images/Config-Wizard-screenshot.png">
-</picture>
+[![Config Wizard screenshot](./src/images/Config-Wizard-screenshot.png)](https://www.config-wizard.com)
 
 Config Wizard is a simple yet powerful AI tool that helps you generate configuration files for your projects.
 
