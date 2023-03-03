@@ -25,19 +25,14 @@ export default async function handler(req: NextRequest): Promise<Response> {
 
     const prompt = generatePrompt(schemaResult.data)
 
-    const payload: OpenAIPayload = {
-      model: "text-davinci-003",
-      prompt,
-      temperature: 0.7,
-      top_p: 1,
-      frequency_penalty: 0,
-      presence_penalty: 0,
-      max_tokens: 750,
+    const payload = {
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: prompt }],
+      max_tokens: 1000,
       stream: false,
-      n: 1,
     }
 
-    const response = await fetch("https://api.openai.com/v1/completions", {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.OPENAI_API_KEY ?? ""}`,
@@ -51,7 +46,7 @@ export default async function handler(req: NextRequest): Promise<Response> {
     }
 
     const openaiJson = await response.json()
-    const text = openaiJson?.choices?.[0]?.text ?? ""
+    const text = openaiJson?.choices?.[0]?.message?.content ?? ""
     return new Response(text)
   } catch (e) {
     console.error(e)
@@ -60,16 +55,4 @@ export default async function handler(req: NextRequest): Promise<Response> {
     }
     return new Response("Bad Request", { status: 400 })
   }
-}
-
-export type OpenAIPayload = {
-  model: string
-  prompt: string
-  temperature: number
-  top_p: number
-  frequency_penalty: number
-  presence_penalty: number
-  max_tokens: number
-  stream: boolean
-  n: number
 }
