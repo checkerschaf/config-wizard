@@ -11,7 +11,7 @@ Config Wizard is a simple yet powerful AI tool that helps you generate configura
 - Supports Docker out of the box 🐳
 - Supports advanced configuration options too
 - Free and Open Source 🎉
-- Uses the OpenAI API to generate the configuration files (text-davinci-003)
+- Uses the [ChatGPT](https://platform.openai.com/docs/guides/chat/) OpenAI API to generate the configuration files
 
 ---
 
