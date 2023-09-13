@@ -52,11 +52,18 @@ export default function IndexPage() {
             by{" "}
             <Link
               target="_blank"
-              rel="noreferrer"
               className="font-medium underline underline-offset-4"
               href={appConfig.links.author}
             >
               {appConfig.author}
+            </Link>
+            {" - "}
+            <Link
+              target="_blank"
+              className="font-medium underline underline-offset-4"
+              href="https://www.mrcook.app"
+            >
+              Mr. Cook
             </Link>
           </Balancer>
         </p>

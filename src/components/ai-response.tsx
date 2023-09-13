@@ -65,7 +65,6 @@ export default function AiResponse({
           <Link
             href={appConfig.links.github}
             target="_blank"
-            rel="noreferrer"
             className={buttonVariants({ size: "lg" })}
           >
             <Icons.gitHub className="mr-2 h-5 w-5" />
@@ -73,7 +72,6 @@ export default function AiResponse({
           </Link>
           <Link
             target="_blank"
-            rel="noreferrer"
             href={appConfig.links.twitter}
             className={buttonVariants({ variant: "outline", size: "lg" })}
           >
@@ -88,7 +86,6 @@ export default function AiResponse({
               out to me on{" "}
               <Link
                 target="_blank"
-                rel="noreferrer"
                 className="font-medium underline underline-offset-4"
                 href={appConfig.links.twitter}
               >
@@ -97,7 +94,6 @@ export default function AiResponse({
               or open an issue on{" "}
               <Link
                 target="_blank"
-                rel="noreferrer"
                 className="font-medium underline underline-offset-4"
                 href={appConfig.links.github + "/issues"}
               >
